@@ -1,0 +1,78 @@
+.hover-card {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .route-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .route-details h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .route-details p {
+    margin: 5px 0;
+    font-size: 12px;
+    color: gray;
+  }
+  
+  .steps-link {
+    color: #007bff;
+    cursor: pointer;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  .card-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .start-button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1;
+    margin-right: 5px;
+  }
+  
+  .leave-later-button {
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    color: #007bff;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1;
+  }
+  
+  .start-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .leave-later-button:hover {
+    background-color: #e2e2e2;
+  }
+  
