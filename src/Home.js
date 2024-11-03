@@ -118,7 +118,7 @@ const mapStyles = [
 
 function Home() {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: 'AIzaSyDmFTRzH4UebgjP7ifLPTpo8WAmC0qXux8', // Replace with your actual API key
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY, // Replace with your actual API key
     libraries: ['places'],
   });
 
