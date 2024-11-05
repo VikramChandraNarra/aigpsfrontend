@@ -21,10 +21,10 @@ function App() {
         <Box flex="1" ml="80px" overflowY="auto">
           <Routes>
             {/* Home Route */}
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Chatbot />} />
 
             {/* Chat Route */}
-            <Route path="/chat" element={<Chatbot />} />
+            {/* <Route path="/chat" element={<Chatbot />} /> */}
 
             {/* Map Route */}
             <Route path="/map" element={<Map />} />

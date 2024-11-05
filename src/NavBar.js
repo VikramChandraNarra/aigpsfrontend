@@ -12,8 +12,9 @@ import {
 import { FaHome, FaComments, FaMicrophone } from 'react-icons/fa'; // Import icons
 
 const Links = [
-  { name: 'Home', path: '/', icon: <FaHome /> },
-  { name: 'Chat', path: '/chat', icon: <FaComments /> },
+  { name: 'Chat', path: '/', icon: <FaComments /> },
+  // { name: 'Home', path: '/', icon: <FaHome /> },
+  // { name: 'Chat', path: '/chat', icon: <FaComments /> },
   // { name: 'Map', path: '/map', icon: <FaMap /> },
   // { name: 'Speech', path: '/speech', icon: <FaMicrophone /> },
   { name: 'Voice', path: '/voice', icon: <FaMicrophone /> },
