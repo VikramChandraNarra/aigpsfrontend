@@ -1,16 +1,33 @@
 // src/App.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Map from './MapComponent';
-import Home from './Home';
 import Chatbot from './Chatbot';
 import NavBar from './NavBar';
 import { Box, Flex } from '@chakra-ui/react';
-import SpeechToText from './SpeechToText';
 import Voice from './Voice';
 import Loading from './Loading';
+import MobileView from './MobileView';
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if the screen width is less than a specified threshold
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // set the threshold to 768px
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize); // Update on resize
+
+    return () => window.removeEventListener('resize', handleResize); // Cleanup on unmount
+  }, []);
+
+  if (isMobile) {
+    return <MobileView />;
+  }
+
   return (
     <Router>
       <Flex height="100vh" overflow="hidden">
@@ -23,13 +40,10 @@ function App() {
             {/* Home Route */}
             <Route path="/" element={<Chatbot />} />
 
-            {/* Chat Route */}
-            {/* <Route path="/chat" element={<Chatbot />} /> */}
-
             {/* Map Route */}
             <Route path="/map" element={<Map />} />
-            
-            {/* Speech and Voice Routes */}
+
+            {/* Voice Route */}
             <Route path="/voice" element={<Voice />} />
 
             {/* Loading Route */}
